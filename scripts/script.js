@@ -126,6 +126,12 @@ produtos.forEach((produto) => {
         addToCart(produto.nome, produto.preco);
     });
 
+    const likeBtn = document.createElement('ion-icon');
+    likeBtn.name = 'heart';
+    likeBtn.role = null;
+    likeBtn.classList.add('btn-like');
+
+    productDiv.appendChild(likeBtn);
     productDiv.appendChild(img);
     productDiv.appendChild(nome);
     productDiv.appendChild(preco);
@@ -133,3 +139,19 @@ produtos.forEach((produto) => {
 
     produtosContainer.appendChild(productDiv);
 });
+
+const btns = document.querySelectorAll('.btn-like');
+btns.forEach((value) => {
+    value.addEventListener('click', () => {
+        value.classList.toggle('liked');
+    });
+});
+
+function changeTheme(){
+    const hdr = document.querySelector('.header');
+    hdr.classList.toggle('hdr-light');
+    const pdc = document.querySelector('.products');
+    pdc.classList.toggle('pdc-dark');
+    const img = document.querySelector('.bilu');
+    img.classList.toggle('img-light');
+}

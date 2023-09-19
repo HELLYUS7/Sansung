@@ -6,6 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles/style.css">
     <script src="scripts/script.js" defer></script>
+    <script src="scripts/slides.js" defer></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
     <title>Market</title>
 </head>
 
@@ -18,7 +21,7 @@
         
     </aside>
     <header class="header displayFlex flexRow">
-        <img src="assets/logo-samsung-1536.png" class="title">
+        <img src="assets/logo-samsung-1536.png" class="title bilu">
         <nav>
             <ul class="displayFlex flexRow">
                 <li>Home</li>
@@ -26,13 +29,48 @@
                 <li id="bt-carrinho">Carrinho</li>
             </ul>
         </nav>
+        <ion-icon style="font-size: 25px;cursor: pointer;" onclick="changeTheme()" name="contrast"></ion-icon>
     </header>
     <main>
         <section class="apresentation">
             <p class="desc">
                 Galaxy Store
             </p>
+            <div class="slideshow-container">
+
+                <!-- Full-width images with number and caption text -->
+                <div class="mySlides fade">
+                  
+                  <img src="assets/flip3.webp" style="width:100%">
+                  
+                </div>
+              
+                <div class="mySlides fade">
+                  
+                  <img src="assets/S21.jpg" style="width:100%">
+                  
+                </div>
+              
+                <div class="mySlides fade">
+                  
+                  <img src="assets/Watchs.webp" style="width:100%">
+                  
+                </div>
+              
+               
+                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+              </div>
+              <br>
+              
+             
+              <div style="text-align:center">
+                <span class="dot" onclick="currentSlide(1)"></span>
+                <span class="dot" onclick="currentSlide(2)"></span>
+                <span class="dot" onclick="currentSlide(3)"></span>
+              </div>
         </section>
+        
         <section class="products displayFlex flexColumn">
             <h1>Nossos Produtos</h1>
             <div class="products-container displayFlex flexRow" id="produtos">
